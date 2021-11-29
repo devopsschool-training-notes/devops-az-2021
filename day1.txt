@@ -1,0 +1,203 @@
+=============================
+Start Time - 9:30 AM IST
+End time - 5.30 PM IST
+=============================
+Break - 15 mins 
+	11.00 AM  IST 
+	3.30 PM  IST
+Lunch - 
+	1 - 2 PM IST
+
+Demo + Lab === AWS
+==========================================
+DevOps - 8 Hours - 
+===========================
+What is DevOps?
+-------------------------------
+ITS A CULTURE
+ITS A MINDSET Change
+Sets of Prac*
+
+ITS NOT A TOOL
+=============================================================
+What org wants?
+---------------------------
+- Quality Release | 2021 | 2021 | 2022
+- Imm release	  
+- Reduce a cost of dev and running 100 ---> 50
+-----------------------------
+
+EARLIER	    	| NOW
+=============================================
+BUGS Fixing 	| No Bugs
+2 WEEKS		| 30 mins
+10 F in 100 	| 20 F in 100 | SAVE CPU-RAM-STOR-OS
+
+
+
+How?????
+========================================
+What is the Existing Setup?
+
+- Pain
+- Wastage
+- Release Cycle : 1 year -> Bi weekly -> 
+- Model		: Waterfall ==> Agile Model =
+- Architecuture	: Monolitic ==> SOA => Microservices
+- Platform	: Phycial ==> Virtual => Container
+- Process	: X	- GET RID OF WASTE PROCESS
+- Practices	: X	- GET RID OF WASTE PRACTICES
+- Team structure: Arch -> Dev -> QA -> BR -> Release -> Ops -> Support
+- Mindsets	: X
+- Skill sets	: X
+=========================================================================
+Arch -> Dev -> QA -> BR -> Release -> Ops -> Support = DEVOPS
+--------------------------------------------------------------
+			ONE TEAM
+			DEVOPS TEAM
+1 TEAM
+1 MINDSET
+1 PROCESS
+1 PRACTICES
+1 GOAL
+---------------------------------------------------
+I am devOps eng.
+- I am writing a code for the product
+- I am writing a code for for a testing a prod
+- I am writing a code for Ops/infra
+===================================================
+CHANGE MINDSET -- YES - I can do it. We can do it
+---------------------------------------------------
+		CULTURE
+		- SHARING
+		- FEAR WOULD GO AWAY
+------------------------------------------------
+		Introduce - 
+		--- Container
+		--- CI/CD
+		--- DevOps Tools
+		===================
+		Azure DevOps
+		======================
+		PLAN - COde  - An - Buold - Pack - Dep - TEST
+
+
+
+
+What are current pain area for org Objective
+- 
+
+
+How to address these PAIN area?
+How to reach to org Objective
+
+https://www.devopsschool.com/path/
+
+Integration
+- Team === DEVOPS
+- Tools ===> CI
+- Release ==> Cont Delivery
+- Production ==> Cont Deployment 
+- process
+- Practices
+=================================================================================================================
+					DEVOPS
+
+ ARCH	DEV					QA				OPs
+--------------------------------------------------------------------------------------
+				DevOps
+PLAN -> CODE -> Analyze -> Build -> UT  -> Package -> Archive -> dep2QA -> AT -> CC
+----------------------------------------------------------------------------------------
+Jira -> Git -> Sonar -> Maven -> Junit > war -> Artifactory => Ansible -> Sele => Jacoco
+===================================================================================		
+				Jenkins
+										PASS => Release
+										Failed => Release
+
+				jenkinspipeline
+				=======
+				code
+
+==========================================
+What is DevOps? Define in your words in 20 lines.
+============================================
+
+Step -1 - Install git
+	Linux
+		- sudo apt-get install git
+		- sudo yum install git 
+	Mac - 
+		dmg
+	Windows
+		exe | msi
+		-----
+		git-scm.com
+		- git using cmd
+		- git using git bash - where u can run basic linux commands in windows
+
+Step -2 - create repo
+$ git init
+
+Step -3  - Create a file which u want to version
+- DONE
+
+Step -4  - Add these files to git repostory
+$ git add codefile.java
+
+ONE TIME in EMPTY GIT REPO
+-------------------------
+git config user.name "Rajesh Kumar"
+git config user.email "rajesh@devopsschool.com"
+git config --list
+
+Step -5  - Commit these files to git repostory
+git commit -m"First commit"
+
+Step -6  - View a committed file.
+$ git log
+
+
+ 504  cd /e
+  505  clear
+  506  ls
+  507  mkdir gitaz
+  508  cd gitaz/
+  509  clear
+  510  start .
+  511  clear
+  512  ls
+  513  mkdir repo1
+  514  clear
+  515  ls
+  516  cd repo1/
+  517  clear
+  518  pwd
+  519  git init
+  520  ls
+  521  ls -la
+  522  start .
+  523  clear
+  524  touch file1.txt
+  525  touch file2.txt file3.txt
+  526  ls
+  527  clear
+  528  ls
+  529  git add codefile.java
+  530  git add file1.txt
+  531  clear
+  532  git config user.name "Rajesh Kumar"
+  533  git config user.email "rajesh@devopsschool.com"
+  534  git config --list
+  535  clear
+  536  ls
+  537  git commit -m"First commit"
+  538  git log
+  539  history
+
+
+
+
+
+
+
+
