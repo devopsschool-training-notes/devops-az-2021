@@ -141,7 +141,7 @@ $ git init
 Step -3  - Create a file which u want to version
 - DONE
 
-Step -4  - Add these files to git repostory
+Step -4  - Add these files to git staging area
 $ git add codefile.java
 
 ONE TIME in EMPTY GIT REPO
@@ -150,7 +150,7 @@ git config user.name "Rajesh Kumar"
 git config user.email "rajesh@devopsschool.com"
 git config --list
 
-Step -5  - Commit these files to git repostory
+Step -5  - Commit these files froms staging to to git repostory
 git commit -m"First commit"
 
 Step -6  - View a committed file.
@@ -195,8 +195,67 @@ $ git log
   539  history
 
 
+$ ssh ubuntu@15.206.128.64
+rajesh123
 
 
+Rajesh Kumar@DESKTOP-6KRAAR8 MINGW64 /e/gitaz/repo1 (master)
+$ git log
+commit d6d25d824357b803fe487d15bf2bd2d0f23576ea (HEAD -> master)
+Author: Rajesh Kumar <rajesh@devopsschool.com>
+Date:   Mon Nov 29 15:30:43 2021 +0530
+
+    all
+
+commit 925ba5f3c2e6a49b8175aee368ac3ce81e23f9b6
+Author: Rajesh Kumar <rajesh@devopsschool.com>
+Date:   Mon Nov 29 15:29:48 2021 +0530
+
+    adding file2
+
+commit 9b5430ec76e279044d0dedb5de637095f122df9f
+Author: Rajesh Kumar <rajesh@devopsschool.com>
+Date:   Mon Nov 29 14:30:39 2021 +0530
+
+    First commit
+
+Rajesh Kumar@DESKTOP-6KRAAR8 MINGW64 /e/gitaz/repo1 (master)
+
+
+9b5430ec76e279044d0dedb5de637095f122df9f
+--------------------------------
+Unique ID which represent commit
+40 CHAR SHA
+Call it - CHECKSUM
+Call it - commit id
+Created SHA1
+
+Relationship is mainted by Parent-Child between a commits.
+ 540  clear
+  541  ls
+  542  start .
+  543  clear
+  544  git status
+  545  ls
+  546  git add --all
+  547  git status
+  548  vi codefile.java
+  549  git status
+  550  git add --all
+  551  git status
+  552  git commit -m"adding file2" file2.txt
+  553  git status
+  554  git commit -m"all"
+  555  git status
+  556  ls
+  557  history
+  558  ls
+  559  git log
+  560  clear
+  561  git log
+  562  clear
+  563  git show 9b5430ec76e279044d0dedb5de637095f122df9f
+  564  history
 
 
 
