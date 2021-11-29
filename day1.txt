@@ -317,13 +317,46 @@ Relationship is mainted by Parent-Child between a commits.
   622  history
 
 
+================
+git is NOT a file versioning 
+git is NOT a file system versioning 
+	 --------------------
+	collection of files/dirs
+==============================================
+- github
+	Cloud
+	Hosted Enterprise
+- gitlab
+	Cloud
+	Hosted Enterprise
+- bitbucket
+	Cloud
+	Hosted Enterprise
+- gerrit
+	Hosted Enterprise
+----------------------------
+		BEST UI exp
+		ISSUES
+		WIKI
+		RBAC
+		Hosting for multiple CR
+		----
+		---
+		----
 
 
+Step 1- Register and Validate an account at github.com
 
+Step 2 - Login and create a repo 
 
+Step 3 - generate a key| MIND IT | in laptop
+$ ssh-keygen
 
+You get key in C:\Users\Rajesh Kumar\.ssh
+- id_rsa
+- id_rsa.pub - -This key you would upload to https://github.com/settings/keys
 
-
+Step 4 - git push git@github.com:devopsschool-demo-temporary/29nov2021.git master
 
 
 
