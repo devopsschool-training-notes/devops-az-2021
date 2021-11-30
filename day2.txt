@@ -351,11 +351,14 @@ sonar.host.url=http://65.0.170.64:9000
 
 
 ===================================
+===================================
+RUN SCANNER ON THE SOURCE CODE
+----------------------------------
+scanner - C:\sq\scanner\bin\sonar-scanner.bat
 
+Where
 
-
-
-
+Code - C:\sq\code
 
 
 
