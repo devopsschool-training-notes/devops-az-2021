@@ -210,6 +210,162 @@ $ cat .gitignore
 build/
 binary.exe
 
+==============================================================================
+==============================================================================
+What is SonarQube?
+- Quality Management tool
+- From SonarSource
+- Release
+	https://www.sonarqube.org/downloads/
+	+ 
+	https://www.sonarlint.org/
+- Version
+	9.X
+- Written in Java
+	- Platform independent
+	- Require JRE
+
+Quality?
+- Code Quality [ Focus ]
+- Test Quality
+
+Code Quality?
+- Quality of the Code.
+
+How?
+- Peers Code Review
+- Static Code Review
+	- Code would Review Code
+	- Rule would Review Code
+	- 1 Rule === 1 Rule
+	- Multiple Rules == ONE SCA TOOL
+	https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis
+
+Why Sonarqube?
+- 70% of the bUGS found in the product after release 
+	NOT coz of Bad testing
+	But coz of Bad Code Quality
+
+How it Works?
+===============================
+
+Human -> SonarQube Dashboard
+	- JAVA/HTML/CSS
+		- Code Issues
+			    ---> DATABASE  <----- Reports<---- Scanner <----- Code
+				-> H2
+				- ORACLE
+				- MSSQL
+				- PS
+	- Search (Elasticsearch)
+	- Rules Database
+	- Quality Profile
+	- Quality Gates
+
+============================
+SonarQube Server
+----------------
+Dashboard
+	Projects
+		Code issues [ W W H W H ]
+	Rules
+	Quality Profile
+	Quality Gates
+Databases
+
+Search - ES
+============================
+Workstation
+----------------
+Code 
+
+Scanner
+
+How to install Sonarqube Server
+==================================
+ 1  clear
+    2  ls
+    3  sudo yum install java-11-openjdk-devel
+    4  clear
+    5  ls
+    6  java --version
+    7  clear
+    8  ls
+    9  wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.2.1.49989.zip
+   10  sudo yum install wget unzip -y
+   11  clear
+   12  ls
+   13  sudo yum install wget unzip -y
+   14  wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.2.1.49989.zip
+   15  clear
+   16  ls
+   17  unzip sonarqube-9.2.1.49989.zip
+   18  clear
+   19  ls
+   20  cd sonarqube-9.2.1.49989
+   21  ls
+   22  cd bin/
+   23  ls
+   24  clear
+   25  ls
+   26  cd linux-x86-64/
+   27  ls
+   28  ./sonar.sh start
+   29  ./sonar.sh status
+
+
+65.0.170.64
+
+http://65.0.170.64:9000/
+admin
+admin123
+
+
+============================
+Workstation
+----------------
+Code 
+- git clone https://github.com/devopsschool-demo-labs-projects/java-sonarqube-helloworld-src
+- Change sonar-project.properties
+	- This is prop file for scanner	
+	- Contains 
+		projectName and many other metadata
+
+----
+sonar.projectKey=org.sonarqube:devopsschool
+sonar.projectName=DevOpsSchool
+sonar.projectVersion=1.0
+sonar.login=admin
+sonar.password=admin123
+----
+
+
+Scanner
+- Download a scanner
+- Extract it
+- && Changa file conf/sonar-scanner.properties
+
+#----- Default SonarQube server
+sonar.host.url=http://65.0.170.64:9000
+
+
+
+===================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
