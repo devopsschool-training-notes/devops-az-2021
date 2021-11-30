@@ -66,6 +66,71 @@ Types of Branch
 
 git push git@github.com:devopsschool-demo-temporary/29nov2021.git fea1
 
+======================================================================
+Merging Strategy
+===========================================
+- Fast forward
+- Recusive 
+- Cherry-Pick
+========================
+- Fast forward
+
+  527  git log --oneline
+  528  git checkout fea1
+  529  git log --oneline
+  530  clear
+  531  touch fea3.txt;git add --all;git commit -m"adding fea3"
+  532  git log --oneline
+  533  clear
+  534  git checkout master
+  535  clear
+  536  git merge fea1
+
+
+- Recusive
+--------------------------------
+ 541  git merge fea1
+  542  clear
+  543  git log --oneline
+  544  git checkout fea1
+  545  git log --oneline
+  546  clear
+  547  touch recurse1.txt;git add --all;git commit -m"adding recurse-1"
+  548  touch recurse2.txt;git add --all;git commit -m"adding recurse-2"
+  549  git checkout master
+  550  clear
+  551  touch master1.txt;git add --all;git commit -m"adding master-1"
+  552  touch master2.txt;git add --all;git commit -m"adding master-2"
+  553  clear
+  554  ls
+  555  git checkout fea1
+  556  touch recurse3.txt;git add --all;git commit -m"adding recurse-3"
+  557  git checkout master
+  558  touch master3.txt;git add --all;git commit -m"adding master-3"
+  559  clear
+  560  git checkout fea1
+  561  touch recurse4.txt;git add --all;git commit -m"adding recurse-4"
+  562  git log --oneline
+  563  git checkout master
+  564  git log --oneline
+  565  clear
+  566  git merge fea1
+  567  git log --oneline
+  568  history
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
