@@ -117,15 +117,98 @@ Merging Strategy
   566  git merge fea1
   567  git log --oneline
   568  history
+=============================
+cherry-picking
 
 
 
 
 
+ 570  clear
+  571  clear
+  572  git checkout fea1
+  573  clear
+  574  touch cherry-1.txt;git add --all;git commit -m"adding cherry-1"
+  575  touch cherry-2.txt;git add --all;git commit -m"adding cherry-2"
+  576  touch cherry-3.txt;git add --all;git commit -m"adding cherry-3"
+  577  touch cherry-4.txt;git add --all;git commit -m"adding cherry-4"
+  578  clear
+  579  git log --oneline
+  580  git checkout master
+  581  ls
+  582  git cherry-pick 1ff90d1
+  583  ls
 
 
+How to resolve conflict?
+-------------------------------------
+ 589  vi fea1.txt
+  590  git add --all
+  591  git commit -m"done"
+  592  git checkout fea1
+  593  vi fea1.txt ]
+  594  git commit -m"done fea1"
+  595  git add --all
+  596  git commit -m"done fea1"
+  597  clear
+  598  git checkout master
+  599  git merge fea1
+  600  ls
+  601  git status
+  602  clear
+  603  vi fea1.txt
+  604  vi fea1.txt
+  605  vi fea1.txt
+  606  git add --all
+  607  git commit -m
+  608  git commit -m"conf resolved"
+  609  git merge fea1
 
 
+Undoing
+==========================
+ 613  git status
+  614  touch clean.txt
+  615  git status
+  616  git clean -f -d
+  617  git status
+  618  clar
+  619  clear
+  620  touch reset.txt
+  621  git status
+  622  git add --all
+  623  git status
+  624  git reset reset.txt
+  625  git status
+  626  clear
+  627  git status
+  628  git clean -f -d
+  629  clear
+  630  git status
+ 631  touch good.txt
+  632  git add --all
+  633  git commit -m"Good code"
+  634  clear
+  635  git log --oneline
+  636  clear
+  637  touch bad.txt;git add --all;git commit -m"Bad Code"
+  638  git log --oneline
+  639  clear
+  640  git log --oneline
+  641  git revert c0a2c2c
+  642  clear
+  643  git revert c0a2c2c
+  644  git log --oneline
+  645  git diff 4184627 c0a2c2c
+  646  git diff 4184627 7087bf3
+
+
+gitignore
+------------------------------
+Rajesh Kumar@DESKTOP-6KRAAR8 MINGW64 /e/gitaz/repo1 (master)
+$ cat .gitignore
+build/
+binary.exe
 
 
 
