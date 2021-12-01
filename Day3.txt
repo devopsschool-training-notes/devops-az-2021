@@ -176,7 +176,9 @@ ansible localhost -m service -a "name=apache2 state=started" -b
 ansible localhost -m file -a "name=/opt/raju.txt state=touch" -b
 
 
-
+Assignment
+=========================
+https://www.devopsschool.com/blog/ansible-adhoc-commands-lab-excercise-part-1/
 
 
 
