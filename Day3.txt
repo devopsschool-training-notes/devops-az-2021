@@ -1,0 +1,184 @@
+What is Ansible?
+--------------------
+	Config mgmt tool
+	Aka - mgng a config of server(S)
+	Written in Python
+	Release
+		ansible		CMD + free + os
+		ansible tower	CMD+GUI + Paid
+		ansible awx	CMD+GUI + Free + NO SUPPORT + LATEST NON tested code.
+	Version
+	2.X
+		Python 2.x
+		Python 3.x
+	By Redhat
+	
+
+
+Tool
+- save time
+- save cost
+- imp eff
+
+What is Config?
+----------------------
+	Server(S)
+
+What config in server aka what resources we have in server to which we manage config?
+--------------------------------------
+Resources				Actions
+-----------------------------------------------------------
+HARDWARE
+	Network
+	CPU=RAM-HDD
+SOFTWARE
+	file			C | U | D
+	dir			C | U | D		
+	services		S S E D 	
+	apt			i | r | u
+	cmd			run some script
+	yum			i | r | u
+PEOPLE
+	users			a e d 
+	groups			a e d
+Policy				
+	
+
+Ansible 
+	can take a actions of Resources of multiple server at parrell.
+	
+
+
+Why Ansible?
+===================================
+	You want to manage SERVER's config parrell.
+	Ansible
+	- Easy to learn
+	----- Learn - Test - debug - extend - share etc
+	
+	Compare to 		
+		java  - python - perl 
+		bash - bash ==== has a prb [NOT a platform independent]
+
+	IDEOMPOTENT
+	1st ---- 10 Steps --- 1 mins - 10 mins
+	2nd ----- 2 steps/10 --- 2 mins  - 2mins
+
+	Agent less
+
+Other tools - Chef - puppet - cfengine - 
+=============================================
+Ansible Architecture
+================================================================
+
+Human ---> Ansible Control Server(Acs) ----> Ansible Remote Server(S) - ars
+		LINUX 64 BIT			ANY
+		PYTHON				WINDOWS - DOT NET  | LInux - Python
+		Communication			LInux - SSh - 22
+						Windows - winrrm(http) - 5985 | 5986
+
+Components of ACS	
+=============================================================
+ACS					ARS
+- Ansible CMD
+	- 10s of tools
+	- Module
+	- Plugins
+	- Ansible config file
+- Playbook
+- Inventory	
+--------------------------------------
+What is Module?
+	is Code written in python(linux) or dotnet(windows) or any
+	running in ARS request sent by ACS
+	Module need parameters
+	e.g copy (source file - dest file)
+	e.g yum (install package)
+	https://docs.ansible.com/ansible/2.8/modules/modules_by_category.html
+
+What is plugins?
+	Its code but in Python
+	IF you want to EXTEND Core feature of Ansible --- Use plugins
+	Core
+	External 
+
+What is config file?
+	/etc/ansible/ansible.cfg
+
+what is playbook?
+	is a Script which contains modules n its param.
+	run in ARS
+
+what is inventory?
+	its a file
+		contains
+		IP Address and Auth of ARS
+
+============================================================================
+
+ACS - 65.1.86.103
+ubuntu
+
+
+
+ssh -i rajesh-mumbai.pem ubuntu@65.1.86.103
+
+ 7  sudo apt update
+    8  sudo apt install software-properties-common
+    9  sudo add-apt-repository --yes --update ppa:ansible/ansible
+   10  sudo apt install ansible
+   11  ansible
+   12  clear
+   13  ansible version
+   14  ansible -version
+   15  ansible --version
+   16  cd /usr/lib/python3/dist-packages/ansible
+   17  ls
+   18  cd module
+   19  ls
+   20  cd modules
+   21  ls
+   22  mcd ..
+   23  ls
+   24  cd -
+   25  cd
+   26  ansible --version
+   27  sudo more /etc/ansible/ansible.cfg
+   28  clear
+   29  ansible --version
+   30  cd /usr/bin/
+   31  ls ansible*
+   32  clear
+   33  ansible -h
+=================================================================================
+
+ONE thing. - 
+	CMD
+	SCRIPT
+
+
+==================================================
+Psucode
+---------------------------
+Project - setup a webserver and deploy index.html.
+
+Step 1 - Install webserver		Module	apt (name=apache2 state=latest)
+Step 2 - copy index.html to webserver	Module  copy (dest=/var/www/html/index.html src=index.html)
+Step 3 - start a services of web	Module	service(name=apache2 state=started)	
+Step 4 - Create a a filein some dir	Module file(name=/opt/raju.txt state=touch)
+
+SEARCH  = "ansible module for"
+
+=======================================================================
+ansible localhost -m apt -a "name=apache2 state=latest" -b
+ansible localhost -m copy -a "dest=/var/www/html/index.html src=index.html" -b
+ansible localhost -m service -a "name=apache2 state=started" -b
+ansible localhost -m file -a "name=/opt/raju.txt state=touch" -b
+
+
+
+
+
+
+
+
