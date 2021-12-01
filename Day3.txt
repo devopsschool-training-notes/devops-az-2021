@@ -253,4 +253,110 @@ Afrose Kamal			3.108.44.231
 Pavankumar Doddi		13.233.195.121
 Krishna Bharathi L		13.127.139.182
 Dhanasekaran Mani		3.110.179.39
+==================================================================================
+
+ansible web -i inventory -m apt -a "update_cache=yes" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m apt -a "name=apache2 state=latest" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m copy -a "dest=/var/www/html/index.html src=index.html" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m service -a "name=apache2 state=started" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m file -a "name=/opt/raju.txt state=touch" -b -u ubuntu --key-file=node.pem
+
+ansible web -i inventory -m apt -a "update_cache=yes" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m apt -a "name=apache2 state=latest" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m copy -a "dest=/var/www/html/index.html src=index.html" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m service -a "name=apache2 state=started" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m file -a "name=/opt/raju.txt state=touch" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m apt -a "update_cache=yes" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m apt -a "name=apache2 state=latest" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m copy -a "dest=/var/www/html/index.html src=index.html" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m service -a "name=apache2 state=started" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m file -a "name=/opt/raju.txt state=touch" -b -u ubuntu --key-file=node.pem
+
+
+What is Playbook?
+============================================
+- Its Yaml file
+- contains 
+	Multiple PLAY
+	Vars
+	Roles
+	Handlers
+	
+What is PLAY?
+---------------------
+Hosts: Group name mentioned of inventory
+Tasks:
+	Module1 & its param
+	Module2 & its param
+	Module3 & its param
+	Module60 & its param
+
+---------------PLAYBOOK ---------------
+Hosts: Group name mentioned of inventory
+Tasks:
+	Module1 & its param
+	Module2 & its param
+	Module3 & its param
+	Module60 & its param
+Hosts: Group name mentioned of inventory
+Tasks:
+	Module1 & its param
+	Module2 & its param
+	Module3 & its param
+	Module60 & its param
+Hosts: Group name mentioned of inventory
+Tasks:
+	Module1 & its param
+	Module2 & its param
+	Module3 & its param
+	Module60 & its param
+
+
+ansible web -i inventory -m apt -a "update_cache=yes" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m apt -a "name=apache2 state=latest" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m copy -a "dest=/var/www/html/index.html src=index.html" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m service -a "name=apache2 state=started" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m file -a "name=/opt/raju.txt state=touch" -b -u ubuntu --key-file=node.pem
+
+
+https://www.devopsschool.com/blog/understanding-ansible-playbook-using-diagram/
+https://www.devopsschool.com/blog/anatomy-of-ansible-play-defined/
+
+---
+- name: Update web servers
+  hosts: web
+
+  tasks:
+  - name: Updating Ubuntu
+    apt:
+      update_cache: yes
+  - name: Installing Apache 2
+    apt:
+      name: apache2
+      state: latest
+  - name: Copy index file
+    ansible.builtin.copy:
+      src: index.html
+      dest: /var/www/html/index.html
+  - name: Start service httpd, if not started
+    ansible.builtin.service:
+      name: apache2
+      state: started
+  - name: Change file ownership, group and permissions
+    ansible.builtin.file:
+      path: /opt/raju.txt
+      state: touch
+
+
+https://docs.ansible.com/ansible/2.9/modules/list_of_windows_modules.html
+
+
+$ ansible-playbook -i inventory web.yaml -b -u ubuntu --key-file=node.pem
+
+
+Lab - 
+https://www.devopsschool.com/blog/ansible-playbook-lab-excercise-part-2/
+
+
+
 
