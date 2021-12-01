@@ -181,6 +181,76 @@ Assignment
 https://www.devopsschool.com/blog/ansible-adhoc-commands-lab-excercise-part-1/
 
 
+============================================
+3.110.159.34
+15.207.87.175
+13.233.254.26
+
+ansible all -i inventory -m apt -a "name=apache2 state=latest" -b
+ansible all -i inventory -m copy -a "dest=/var/www/html/index.html src=index.html" -b
+ansible all -i inventory -m service -a "name=apache2 state=started" -b
+ansible all -i inventory -m file -a "name=/opt/raju.txt state=touch" -b
 
 
+Authentication - how to login
+----------------
+user name and pass
+username and key
+
+
+Authorization - wt u r allowed to do
+----------------
+
+apt-get update
+
+ansible all -i inventory -m apt -a "update_cache=yes" -b -u ubuntu --key-file=node.pem
+ansible all -i inventory -m apt -a "name=apache2 state=latest" -b -u ubuntu --key-file=node.pem
+ansible all -i inventory -m copy -a "dest=/var/www/html/index.html src=index.html" -b -u ubuntu --key-file=node.pem
+ansible all -i inventory -m service -a "name=apache2 state=started" -b -u ubuntu --key-file=node.pem
+ansible all -i inventory -m file -a "name=/opt/raju.txt state=touch" -b -u ubuntu --key-file=node.pem
+
+
+============================================
+[web]
+3.110.159.34
+15.207.87.175
+
+[db]
+15.207.87.175
+
+ansible web -i inventory -m apt -a "update_cache=yes" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m apt -a "name=apache2 state=latest" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m copy -a "dest=/var/www/html/index.html src=index.html" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m service -a "name=apache2 state=started" -b -u ubuntu --key-file=node.pem
+ansible web -i inventory -m file -a "name=/opt/raju.txt state=touch" -b -u ubuntu --key-file=node.pem
+
+
+BabuRamShankar			13.233.254.26
+Jeymalraj Ramakrishnan		13.234.33.172
+Jenitha				15.206.167.248
+Satheeshkanna B			3.110.161.16
+Daniel Selvan			13.234.117.27
+Subash Arumugam			13.127.43.248
+Shilpa Palanikumar		13.234.136.91
+Arun Kumar Thangavelu		3.110.212.151
+Keerthana			3.108.194.0
+Velmurugan A			13.126.38.58
+Nithya Lakshmi K B		13.127.220.243
+Arul Princy Rani		13.233.165.17
+Arvinth, Krishna Murthi		15.206.168.76
+Sowmiya Chandran		13.233.111.193
+Sangeetha Hariharan		13.233.143.206
+Alfred Dany			3.110.143.149
+Susanna Ebenezer		13.126.9.8
+Thangavelu Krishnasamy		3.110.186.210
+krishna pavan			3.6.86.79
+Manasa				13.233.79.128
+Gayathri Karunakaran		13.232.27.84
+arunpandian K			13.235.114.49
+Alfred Jeyaraj			13.232.179.137
+Dinesh Bhaskaran		13.233.161.49
+Afrose Kamal			3.108.44.231
+Pavankumar Doddi		13.233.195.121
+Krishna Bharathi L		13.127.139.182
+Dhanasekaran Mani		3.110.179.39
 
