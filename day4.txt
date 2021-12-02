@@ -54,6 +54,128 @@ $ java --version
 
 $ mvn
 $ mvn --version
+========================================================
+
+Step 1 - Create a project dir structure
+
+mvn archetype:generate -DgroupId=com.devopsschool.software -DartifactId=chat -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+================================================================================================================================================================================================================================================================================
+
+
+
+E:\az\chat>mvn
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.577 s
+[INFO] Finished at: 2021-12-02T11:36:16+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] No goals have been specified for this build. You must specify a valid lifecycle phase or a goal in the format <plugin-prefix>:<goal> or <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>. Available lifecycle phases are: validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pre-site, site, post-site, site-deploy. -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoGoalSpecifiedException
+
+
+What is goals?
+What lifecycle phase 
+	<plugin-prefix>:<goal>
+What is plugins
+===============================================
+What is Lifecycle?
+--------------------------------
+
+Human Lifecycle?
+-----------------------GOD---------------------------------
+born -> kid -> teen -> young -> mid -> old -> die
+
+Software Dev Lifecycle?
+-----------------------Software Engieer--------------------
+------------------------PROJECT Lifecycle-----------------------------------
+Compile -> UT -> Package -> Dep2Artifactory
+-------------------------------------------------------
+		PHASE
+Phase			Mantra(Goal)		Plugins:version (jar)
+--------------------------------------------------------------
+Compile			compile			core plugins
+UT			test			core plugins
+Package			package			core plugins
+Dep2Artifactory		deploy			core plugins
+
+
+What is Plugins?
+-------------------------
+All feature is power by plugins
+-------------------
+Core -> plugins
+Community -> ext plugins
+
+
+pom.xml
+====================================
+- its build file.
+- Project Object Model
+- Xml format
+- contains
+	Name 
+	Version
+	Depen
+	Many many many more
+
+
+groupId
+artifactId
+
+packaging: jar war ear pom
+
+version
+	Release - 1.0 1.1 1.1.1 [ major minor hotfix]
+	Not Release - 1.0-SNAPSHOT 1.1-SNAPSHOT 1.1.1-SNAPSHOT [ major minor hotfix]	
+name - Packagename
+=======================================
+Company name - microsoft
+			office
+				word
+				excel
+				slide
+				outlook
+				common
+---------------CTO/EA
+		Package Structure
+		- Ease of Naming
+		- Dep mgmt
+
+		com.microsoft.office		==== groupId
+		com.microsoft.office.word	==== artifactId
+			import com.microsoft.office.common
+		com.microsoft.office.excel
+			import com.microsoft.office.common
+		com.microsoft.office.common
+
+		org
+
+		net
+
+
+mvn compile
+mvn test
+mvn package
+==============================
+https://maven.apache.org/ref/3.8.2/maven-core/lifecycles.html
+
+
+
+
+
+
+
+
+
+
 
 
 
