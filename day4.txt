@@ -312,16 +312,48 @@ mvn -> pom.xml 			-------> Local Repo			--> Central Repo
 				C:\Users\Rajesh Kumar\.m2\repository		Download back to local repo
 
 
+Step 3 - To Upload a Package - Modify pom.xml and Add Repo Location
+
+
+<distributionManagement>
+    <repository>
+        <id>rajesh</id>
+        <name>ip-172-31-10-156.ap-south-1.compute.internal-releases</name>
+        <url>http://13.232.206.74:8081/artifactory/rajesh-release</url>
+    </repository>
+
+    <snapshotRepository>
+        <id>rajesh</id>
+        <name>ip-172-31-10-156.ap-south-1.compute.internal-snapshots</name>
+        <url>http://13.232.206.74:8081/artifactory/rajesh-snapshop</url>
+    </snapshotRepository>
+</distributionManagement>
+
+
+Step 4 - Modify setting.xml with Access of repo using element server
+admin
+Admin$123
+
+
+Location 
+- C:\tools\maven\conf\settings.xml
+- /etc/maven/settings.xml
+    <server>
+      <id>rajesh</id>
+      <username>admin</username>
+      <password>Admin$123</password>
+    </server>
+
+Step - 5 =====
+
+
+Element ID of Server and Element ID of repository must match
 
 
 
 
-Virtual Repo
-
-
-Step 3 
-
-Step -  
+Step - 6
+mvn deploy [ this would c-tes-p-i-upload to art)
 
 
 
