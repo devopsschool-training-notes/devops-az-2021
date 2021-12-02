@@ -166,15 +166,162 @@ mvn test
 mvn package
 ==============================
 https://maven.apache.org/ref/3.8.2/maven-core/lifecycles.html
+================================================================
+
+What is Artifactory?
+----------------------------	
+- Repo mgmt tool
+- Written in Java
+	= JRE
+	= Platform ind
+- From Jfrog
+- Release
+	https://jfrog.com/pricing/#hosted
+- Version
+	7.X	
+
+What is repo?
+-----------
+	Version of Packages
+
+Package
+---------------------
+System 
+	EXE
+	MSE
+	Nuget
+	Deb
+	rpm
+	DMG
+
+Application
+	zip
+	jar
+	war
+	ear
+	python
+	ruby
+	helm
+	docker
+	
+Types of Packages?
+---------------------
+https://www.jfrog.com/confluence/display/JFROG/Package+Management
+
+Why Artifactory?
+---------------------------------
+	ONE Centralized place for ALL KINDS of packages for your ORG
+	Role Based Security
+	Integration with Built tool
+	Integration with CI tool
+	Package Durability
+			- Checksum
+			- SHA
+	Enforcess org process
+	Admin
+	- Cleanup
+	- Backup
+	- Audit & compliances
+
+Other tools
+- Sonatype Nexus
+- Apache Archiva 
+
+
+Architecture of Artifactory?
+===================================
+			   backend    
+Human --> Artifcatory Web   --->  ------> DB	
+	  (8082)
+          HTML/JS/CS/JAVA   JAVA	  PS
+					  Derby
+				     	  MSQL
+					  MYSQL
+					  ORACLE
+
+                           -----> FileStore
+			    https://www.jfrog.com/confluence/display/JFROG/Configuring+the+Filestore
+
+PORT for Upload & Downloading - 8081
+
+How can i install it?
+=============CENTOS = RHEL ==================
+
+$ yum install wget -y
+$ wget -O jfrog-rpm-installer.tar.gz "https://releases.jfrog.io/artifactory/artifactory-pro/org/artifactory/pro/jfrog-artifactory-pro/7.27.10/jfrog-artifactory-pro-7.27.10-linux.tar.gz"
+$ tar -xvzf jfrog-rpm-installer.tar.gz
+$ cd jfrog-platform-trial-pro*
+$ sudo ./install.sh
+$ sudo systemctl start artifactory.service
+$ sudo systemctl start xray.service
+
+wget https://releases.jfrog.io/artifactory/artifactory-pro-rpms/artifactory-pro-rpms.repo -O jfrog-artifactory-pro-rpms.repo;
+sudo mv jfrog-artifactory-pro-rpms.repo /etc/yum.repos.d/;
+sudo yum update && sudo yum install jfrog-artifactory-pro
+
+=============Docker ==================
+
+Docker Compose
+$ wget -O jfrog-compose-installer.tar.gz "https://releases.jfrog.io/artifactory/jfrog-prox/org/artifactory/pro/docker/jfrog-platform-trial-prox/[RELEASE]/jfrog-platform-trial-prox-[RELEASE]-compose.tar.gz"
+
+$ tar -xvzf jfrog-compose-installer.tar.gz
+$ cd jfrog-platform-trial-pro*
+$ sudo ./config.sh
+$ sudo docker-compose -p trial-pro-rabbitmq -f docker-compose-rabbitmq.yaml up -d
+$ sudo docker-compose -p trial-pro up -d
+
+========================
+# To determine your distribution, run lsb_release -c or cat /etc/os-release
+# Example:echo "deb https://releases.jfrog.io/artifactory/artifactory-pro-debs xenial main" | sudo tee -a /etc/apt/sources.list;
+wget -qO - https://releases.jfrog.io/artifactory/api/gpg/key/public | sudo apt-key add -;
+echo "deb https://releases.jfrog.io/artifactory/artifactory-pro-debs {distribution} main" | sudo tee -a /etc/apt/sources.list;
+sudo apt-get update && sudo apt-get install jfrog-artifactory-pro
+
+
+https://jfrog.com/download-jfrog-platform/
+=================
+13.232.206.74
+http://13.232.206.74:8082/
+admin
+Admin$123
+=============================================================
+Step 1  - Create Group and User and Permission
+
+Step 2 - Create a repo  using Maven
+======================================
+Repo Type
+---------------------------
+- Local Repo	= Upload and Download and Hosted by Locally
+- Remote Repo	= Download - its Cache of one Remote Repo. 
+- Virtual Repo Aka Group
+		- Collection of Local and Remote repo
+Local repo
+	Release		http://13.232.206.74:8082/artifactory/rajesh-release/
+	Snapshot	http://13.232.206.74:8082/artifactory/rajesh-snapshop/
+Remote Repo
+	Require Another Maven Repo
+	http://13.232.206.74:8082/artifactory/rajesh-remote/
+ Virtual Repo
+	http://13.232.206.74:8082/artifactory/rajesh-vritual/
+
+How maven resolve a dependency?
+---------------------------------
+
+mvn -> pom.xml 			-------> Local Repo			--> Central Repo
+	Read a depen lib	$USER_HOME/.m2					https://repo.maven.apache.org/maven2/
+				C:\Users\Rajesh Kumar\.m2\repository		Download back to local repo
 
 
 
 
 
 
+Virtual Repo
 
 
+Step 3 
 
+Step -  
 
 
 
