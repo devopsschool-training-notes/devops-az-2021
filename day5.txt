@@ -40,8 +40,9 @@ JIRA -> GIT  -> Sonarqube -> Maven -> Maven(junit) -> Maven(jar) -> Artifactory 
 
 						Jenkins can Integrate all tools - all phases -- all team at oNE continuously.
 						Scheduling
-						Immediate Feedback
 						Integration
+						Immediate Feedback
+						
 						
 Other tools ->
 -----------------------
@@ -139,6 +140,47 @@ curl -X POST --user rajesh:1137da11a4cb053c66ce51d5f3c13da5f6 http://15.206.212.
 http://15.206.212.135:8080/github-webhook/
 
 https://www.devopsschool.com/blog/how-to-schedule-and-trigger-a-jenkins-job-automatically/
+
+=============================================================
+How to integrate with tools?
+
+Step 1 - Install a Plugins
+Step 2 - Configure a plugins
+Step 3 - Use a plugin in job
+https://github.com/devopsschool-demo-labs-projects/java-sonarqube-helloworld-src
+
+SonarQube
+Artifactory
+
+
+
+
+
+http://15.206.212.135:9000
+admin
+admin123
+https://www.devopsschool.com/blog/how-to-integrate-sonarqube-with-jenkins-as-part-of-ci-cd/
+
+
+http://15.206.212.135:8082
+admin
+Admin$123
+http://15.206.212.135:8082/artifactory/rajesh/
+https://www.devopsschool.com/blog/how-to-integrate-artifactory-with-jenkins/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
