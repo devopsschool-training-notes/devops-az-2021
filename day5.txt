@@ -125,6 +125,20 @@ https://www.devopsschool.com/blog/configure-jenkins-first-job-of-java-code-base-
 
 
 
+Scheduling
+==========================
+https://www.devopsschool.com/blog/how-to-schedule-and-trigger-a-jenkins-job-automatically/
+
+curl -X POST --user rajesh:1137da11a4cb053c66ce51d5f3c13da5f6 http://15.206.212.135:8080/job/Rajesh/job/compile/build?delay=0sec
+
+
+
+
+
+
+http://15.206.212.135:8080/github-webhook/
+
+https://www.devopsschool.com/blog/how-to-schedule-and-trigger-a-jenkins-job-automatically/
 
 
 
