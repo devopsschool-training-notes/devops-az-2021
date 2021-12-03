@@ -169,18 +169,30 @@ http://15.206.212.135:8082/artifactory/rajesh/
 https://www.devopsschool.com/blog/how-to-integrate-artifactory-with-jenkins/
 
 
+===============================================
+
+Immediate Feedback
+		Email
+			SMTP Server
+		Chat
+			Slack
+		Dashboard using Pipeline	 
+			Using existing Job
+			Code
 
 
 
 
+Slides
+Myvideos
+Blogs
+https://devopsschool.com/kit/master-in-devops-engineering.html
 
+https://www.devopsschool.com/blog/10-best-youtube-channels-for-programmers-and-devops-engineers/
 
+rajesh@devopsschool.com
 
-
-
-
-
-
+http://www.rajeshkumar.xyz/
 
 
 
