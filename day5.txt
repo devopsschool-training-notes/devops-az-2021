@@ -1,0 +1,131 @@
+What is Jenkins?
+-------------------
+Its a CI tool.
+Written in Java
+	- Platform inde
+	- JRE
+Release
+	Jenkins			- Free - OS 
+	enterprise jenkins	- PAID
+	jenkinx			- Containers
+	BlueOcean		- Code for CI
+Version
+	2.X
+
+Powered by Plugins
+	https://plugins.jenkins.io/
+
+by Community
+
+
+
+
+What is CI?
+---------------------
+AUTO Build + Auto Test
+----------------------
+      Imm Feeback
+
+
+ARC ----> Dev ------------------------------------------> QA --------------------
+----------------------------------------------------------------------------------
+PLAN -> Code -> Analyze -> Build -> UT -> Package -> Archive -> dep2Qa -> AT -> CC
+========================================================================================
+JIRA -> GIT  -> Sonarqube -> Maven -> Maven(junit) -> Maven(jar) -> Artifactory -> Ansible -> Selenium -> Jacoco
+-----------------------------------------------------------------------------------------------------------------
+						Jenkins
+									
+										ALL PAASSES - RELEASE
+										ONE FAILED - Repeat 
+
+						Jenkins can Integrate all tools - all phases -- all team at oNE continuously.
+						Scheduling
+						Immediate Feedback
+						Integration
+						
+Other tools ->
+-----------------------
+Jenkins -> Teamcity -> Bamboo ->
+https://www.devopsschool.com/blog/?s=continuous+integration+tool
+
+
+How to install it?
+---------------------------
+https://www.jenkins.io/doc/book/installing/linux/#red-hat-centos
+15.206.212.135
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum upgrade
+sudo yum install epel-release java-11-openjdk-devel
+sudo yum install jenkins
+sudo systemctl daemon-reload
+
+
+   13  sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo --no-check-certificate
+   14  clear
+   15  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+   16  sudo yum upgrade
+   17   sudo yum install epel-release java-11-openjdk-devel
+   18  sudo yum install jenkins
+   19  sudo systemctl daemon-reload
+   20  ps -eaf | grep jenkins
+   21  systemctl start jenkins
+   22  ps -eaf | grep jenkins
+   23  more /var/lib/jenkins/secrets/initialAdminPassword
+
+http://15.206.212.135:8080/
+rajesh
+rajesh123
+===================================================
+What is your tech?
+	----------- JAVA - py - dotnet --- Need to be installed in Agent
+		which version?
+
+Where is ur source code?
+	- github - svn - p4
+	- access
+
+What is ur builder
+-	maven - gradle
+	bash
+
+When u want to trigger this?
+
+where u want to have feedback?
+	email
+	chat
+
+
+
+
+
+
+What is your tech?
+		java -- installed?
+Where is ur source code?
+		github
+		https://github.com/devopsschool-demo-labs-projects/helloworld-java-maven
+		git installed?
+What is ur builder
+	maven
+	maven is installed?
+
+When u want to trigger this?
+	hourly
+
+where u want to have feedback?
+	email
+
+
+
+- Lab 
+https://www.devopsschool.com/blog/configure-jenkins-first-job-of-java-code-base-with-maven-build-tool/
+
+
+
+
+
+
+
